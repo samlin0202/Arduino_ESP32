@@ -330,7 +330,7 @@ ESP32-CAM 啟動拍照
 - 實際測試中訊號容易遺失或不同步
 - 在專題時程內難以完成長時間穩定運行
 
-![TXRX_serial通訊](image/TX_RX.jpg)
+<img src="image/TX_RX.jpg" width="45%">
 
 為了解決此問題，
 確保系統能完整運作並完成辨識展示，
@@ -399,11 +399,11 @@ ESP32-CAM 每隔數秒自動拍照
 # 📸 成果展示
 
 ## 🚗 自走車
-![最終型態](image/car2_sandtest.jpg)
+<img src="image/car2_sandtest.jpg" width="45%">
 
 (自備辨識內容【寶特瓶】，實際海灘測試)
 
-![海灘實際測試](image/result.jpg)
+<img src="image/result.jpg" width="45%">
 
 ---
 
@@ -412,23 +412,23 @@ ESP32-CAM 每隔數秒自動拍照
 
 ![CAN標註中](image/標註.jpg)
 
-![AI標註](image/dataset1.jpg)
+<img src="image/dataset1.jpg" width="45%">
 
-![AI標註](image/dataset2.jpg)
+<img src="image/dataset2.jpg" width="45%">
 
-![AI標註](image/dataset3.jpg)
+<img src="image/dataset3.jpg" width="45%">
 
 (使用WEB CAMERA進行影像辨識測試)
 
-![辨識結果_玻璃罐](image/camera_test1.jpg)
+<img src="image/camera_test1.jpg" width="45%">
 
-![辨識結果_可樂](image/camera_test2.jpg)
+<img src="image/camera_test2.jpg" width="45%">
 
-![辨識結果_寶特瓶](image/camera_test3.jpg)
+<img src="image/camera_test3.jpg" width="45%">
 
 (專題製作實際辨識結果)
 
-![辨識](image/YOLO.jpg)
+<img src="image/YOLO.jpg" width="45%">
 
 ---
 
@@ -446,7 +446,7 @@ ESP32-CAM 每隔數秒自動拍照
 -  背景反光可能誤判
 -  光線不足時辨識率下降
 
-![手](image/camera_test4.jpg)
+<img src="image/camera_test4.jpg" width="45%">
 
 
 這些誤判也讓我更理解：
