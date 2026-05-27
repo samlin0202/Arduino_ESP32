@@ -57,15 +57,11 @@ ESP32-CAM 負責：
 - 拍攝環境影像
 - python抓取圖片
 
----
-
 # 🧠 AI 模型（YOLOv8）
 YOLOv8n 輕量模型  
 人工蒐集與標註資料集（約 200+ 張圖片）  
 Roboflow 標註  
 類別：Bottle / Can   
-
----
 
 # 🌐 Flask Dashboard
 
@@ -74,8 +70,6 @@ Dashboard 提供：
 - 物件統計  
 - 圖表視覺化  
 - 辨識圖片顯示  
-
----
 
 # 🔌 配線圖
 <div align="center">
