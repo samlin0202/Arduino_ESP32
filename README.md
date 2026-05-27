@@ -1,8 +1,5 @@
 # 🌊 海攤垃圾智慧巡檢系統
 
-<img src="image/car1.jpg" width="45%">
-<img src="image/camera_test1.jpg" width="45%">
-
 本專題結合：
 -  Arduino 自走車
 -  ESP32-CAM 無線影像傳輸
@@ -66,7 +63,7 @@ Flask Dashboard 顯示結果
 
 # 🔌 系統通訊架構
 (通訊配線圖)
-
+<img src="image/signal_wiring.png" width="50%">
 ![signal](image/signal_wiring.png)
 
 --- 
