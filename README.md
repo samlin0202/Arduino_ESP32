@@ -61,13 +61,15 @@ YOLOv8 AI 垃圾辨識
 Flask Dashboard 顯示結果
 ```
 ---
+
 # 🔌 系統通訊架構
-## 通訊配線圖
+通訊配線圖:
 ![signal](image/signal_wiring.png)
 ---
 # 🔋 電源架構
-## 電源配線圖
+電源配線圖:
 ![power](image/power_wiring.png)
+
 ---
 # 🔄 系統流程
 
@@ -147,12 +149,14 @@ AI-Ocean-Waste-Detection-Car/
 選擇空間較大的方向轉彎
 ```
 ---
+
 # 📷 ESP32-CAM 模組
 
 ESP32-CAM 負責：
 - 拍攝環境影像
 - 透過 WiFi 傳輸圖片
 - HTTP 傳送至 Python Server
+
 ---
 
 # 🧠 YOLOv8 AI 辨識模組
@@ -166,7 +170,9 @@ ESP32-CAM 負責：
 - 約 900+ 張圖片
 - Roboflow 標註
 - 小型實驗型資料集
+
 ---
+
 # 🌐 Flask Dashboard
 
 Dashboard 提供：
@@ -174,7 +180,9 @@ Dashboard 提供：
 - 物件統計
 - 圖表視覺化
 - 辨識圖片顯示
+
 ---
+
 # 🛠️ 使用技術
 
 | 類別 | 技術 |
@@ -186,10 +194,13 @@ Dashboard 提供：
 | Hardware | Arduino UNO / ESP32-CAM |
 | Communication | HTTP / WiFi |
 | Development Tools | VSCode / Arduino IDE |
+
 ---
+
 # 🧪 專案開發歷程與架構調整
 本專案在開發過程中，
 經歷多次系統架構調整與測試。
+
 ---
 
 # 📡 原始設計構想
@@ -275,7 +286,6 @@ ESP32-CAM 啟動拍照
 並將車架整體抬高，
 提升離地高度以增加沙地通行能力。
 ![壓克力車架](image/car2_sandtest.jpg)
----
 
 ##  4️⃣馬達進沙導致故障
 
@@ -304,7 +314,6 @@ ESP32-CAM 啟動拍照
 
 為了解決此問題，
 改為多次測量取平均值，減少錯誤判斷提升穩定性，但仍無法完全消除極端誤差
----
 
 ## 6️⃣Arduino 與 ESP32-CAM 通訊問題
 在實作過程中發現 Arduino 與 ESP32-CAM 之間的直接通訊整合存在穩定性問題，主要原因包括：
@@ -337,6 +346,7 @@ Python + YOLOv8 進行影像辨識
 - 無法實現「事件觸發式拍照」
 - 可能產生重複或無效影像
 - 效率較原設計略低
+
 ---
 
 # 🔧 最終架構調整
