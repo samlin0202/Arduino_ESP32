@@ -61,17 +61,17 @@ Flask Dashboard 顯示結果
 ```
 ---
 
-# 🔌 系統通訊架構
-(通訊配線圖)
-<img src="image/signal_wiring.png" width="50%">
-![signal](image/signal_wiring.png)
+# 🔌 系統配線圖
+<div align="center">
 
---- 
+  <img src="image/signal_wiring.png" width="45%">
+  <img src="image/power_wiring.png" width="45%">
 
-# 🔋 電源架構
-(電源配線圖)
+  <br><br>
 
-![power](image/power_wiring.png)
+  (通訊配線圖)　　(電源配線圖)
+
+</div>
 
 ---
 
