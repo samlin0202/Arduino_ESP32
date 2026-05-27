@@ -1,11 +1,12 @@
 # 🌊 海攤垃圾智慧巡檢系統
 # 📌 專案簡介
 
-本專題結合
+本專題結合  
 • Arduino 自走車  
 • ESP32-CAM  
 • YOLOv8 AI 物件辨識  
 • Flask 網頁系統  
+
 打造一套「海洋垃圾智慧巡檢原型系統」。  
 
 ---
@@ -33,7 +34,7 @@ Flask Dashboard 顯示結果
 • Arduino 自走車避障控制  
 • ESP32-CAM 無線拍照  
 • HTTP 影像傳輸  
-• YOLOv8 垃圾辨識（Bottle/Can/Glass） 
+• YOLOv8 垃圾辨識（Bottle/Can/Glass）  
 • Flask 即時視覺化介面  
 • 辨識結果統計  
 • Bounding Box 標註  
@@ -59,20 +60,20 @@ ESP32-CAM 負責：
 ---
 
 # 🧠 AI 模型（YOLOv8）
-YOLOv8n 輕量模型
-人工蒐集與標註資料集（約 200+ 張圖片）
-Roboflow 標註
-類別：Bottle / Can 
+YOLOv8n 輕量模型  
+人工蒐集與標註資料集（約 200+ 張圖片）  
+Roboflow 標註  
+類別：Bottle / Can   
 
 ---
 
 # 🌐 Flask Dashboard
 
-Dashboard 提供：
-- 辨識結果展示
-- 物件統計
-- 圖表視覺化
-- 辨識圖片顯示
+Dashboard 提供：  
+- 辨識結果展示  
+- 物件統計  
+- 圖表視覺化  
+- 辨識圖片顯示  
 
 ---
 
@@ -80,7 +81,7 @@ Dashboard 提供：
 <div align="center">
 
   <img src="image/signal_wiring.png" width="40%">
-  <img src="image/power_wiring.png" width="50%">
+  <img src="image/power_wiring.png" width="45%">
 
   <br><br>
 
@@ -177,18 +178,18 @@ ESP32-CAM 啟動拍照
 
 ## 3️⃣ 沙灘地形造成車體卡住
 
-在室內平坦地面測試時，
+室內平坦地面測試:  
 自走車可正常行駛。
 
-但實際移至沙灘地形後，
-由於車身底部離地高度不足，
+實際移至沙灘地形後:  
+由於車身底部離地高度不足，  
 導致底盤容易直接摩擦沙面而卡住。
 
 <img src="image/car1_sandtest.jpg" width="45%">
 
 為了解決此問題，
 
-後續重新設計並訂製「壓克力車架」，
+後續重新設計並訂製「壓克力車架」，  
 並將車架整體抬高，提升離地高度以增加沙地通行能力。
 
 <img src="image/car2_sandtest.jpg" width="45%">
@@ -227,7 +228,7 @@ ESP32-CAM 啟動拍照
 <img src="image/TX_RX.jpg" width="45%">
 
 為了解決此問題，
-確保系統能完整運作並完成辨識展示，
+確保系統能完整運作並完成辨識展示，  
 最終將架構調整為：
 
 ```text
