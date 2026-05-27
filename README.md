@@ -69,7 +69,7 @@ Flask Dashboard 顯示結果
 
   <br><br>
 
-  (通訊-配線圖)     (電源-配線圖)
+  (通訊-配線圖) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(電源-配線圖)
 
 </div>
 
