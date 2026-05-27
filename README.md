@@ -63,12 +63,14 @@ Flask Dashboard 顯示結果
 
 # 🔌 系統通訊架構
 (通訊配線圖)
+
 ![signal](image/signal_wiring.png)
 
 --- 
 
 # 🔋 電源架構
 (電源配線圖)
+
 ![power](image/power_wiring.png)
 
 ---
@@ -169,7 +171,7 @@ ESP32-CAM 負責：
 - Bottle / Can 類別辨識
 
 資料集為人工蒐集與標註：
-- 約 900+ 張圖片
+- 約 200+ 張圖片
 - Roboflow 標註
 - 小型實驗型資料集
 
@@ -409,14 +411,20 @@ ESP32-CAM 每隔數秒自動拍照
 ## 🧠 YOLO 辨識
 (使用ROBOFLOW進行AI標註)
 
+![CAN標註中](image/標註.jpg)
+
 ![AI標註](image/dataset1.jpg)
+
 ![AI標註](image/dataset2.jpg)
+
 ![AI標註](image/dataset3.jpg)
 
 (使用WEB CAMERA進行影像辨識測試)
 
 ![辨識結果_玻璃罐](image/camera_test1.jpg)
+
 ![辨識結果_可樂](image/camera_test2.jpg)
+
 ![辨識結果_寶特瓶](image/camera_test3.jpg)
 
 (專題製作實際辨識結果)
@@ -448,7 +456,7 @@ ESP32-CAM 每隔數秒自動拍照
 
 > 而是學習影像中的統計特徵。
 
-由於資料集規模較小（約 800+ 張），
+由於資料集規模較小（約 200+ 張），
 模型目前仍屬於學習與實驗階段。
 
 ---
