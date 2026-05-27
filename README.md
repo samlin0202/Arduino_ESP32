@@ -31,15 +31,14 @@
 ---
 
 # 🧠 系統功能
-
-✅ Arduino 自走車避障控制  
-✅ ESP32-CAM 無線拍照  
-✅ HTTP 影像傳輸  
-✅ YOLOv8 垃圾辨識  
-✅ Flask Dashboard 即時展示  
-✅ 辨識結果統計  
-✅ Bounding Box 標註  
-✅ 模組化系統架構  
+• Arduino 自走車避障控制  
+• ESP32-CAM 無線拍照  
+• HTTP 影像傳輸  
+• YOLOv8 垃圾辨識  
+• Flask Dashboard 即時展示  
+• 辨識結果統計  
+• Bounding Box 標註  
+• 模組化系統架構  
 
 ---
 
@@ -226,6 +225,7 @@ ESP32-CAM 啟動拍照
 ## 1️⃣ 系統演進:
 ### 🧪 第一階段：單一超音波感測器
 僅使用一顆超音波感測器進行前方偵測，當遇到障礙物時進行固定或隨機轉向。
+
 ⚠️ 問題:
 - 無法判斷左右空間
 - 容易形成繞圈行為
@@ -234,6 +234,7 @@ ESP32-CAM 啟動拍照
 
 ### 🧪 第二階段：伺服馬達掃描感測
 將單一超音波感測器安裝於伺服馬達上，透過 0° / 90° / 180° 進行掃描，模擬多方向感測。
+
 ⚠️ 問題:
 - 掃描時間過長導致反應延遲
 - 機械轉動影響即時性
@@ -242,6 +243,7 @@ ESP32-CAM 啟動拍照
 
 ### 🧪 第三階段：三超音波感測器（最終架構）
 改為固定式三感測器（左 / 中 / 右），即時回傳距離資訊。
+
 ✔️ 優點:
 - 即時取得方向資訊
 - 避免掃描延遲
@@ -390,24 +392,26 @@ ESP32-CAM 每隔數秒自動拍照
 
 ## 🚗 自走車
 ![最終型態](image/car2_sandtest.jpg)
+(自備辨識內容【寶特瓶】，實際海灘測試)
 ![海灘實際測試](image/result.jpg)
 
 ---
 
 ## 🧠 YOLO 辨識
-![BOTTLE](image/BOTTLE2.jpg)
+(使用ROBOFLOW進行AI標註)
 ![AI標註](image/dataset1.jpg)
 ![AI標註](image/dataset2.jpg)
 ![AI標註](image/dataset3.jpg)
-![辨識結果_玻璃罐](image/dataset1.jpg)
-![辨識結果_可樂](image/dataset2.jpg)
-![辨識結果_寶特瓶](image/dataset3.jpg)
+(使用WEB CAMERA進行影像辨識測試)
+![辨識結果_玻璃罐](image/camera_test1.jpg)
+[辨識結果_可樂](image/camera_test2.jpg)
+[辨識結果_寶特瓶](image/camera_test3.jpg)
+(專題製作實際辨識結果)
 ![辨識](image/YOLO.jpg)
 
 ---
 
 ## 🌐 Dashboard 畫面
-
 
 ---
 
@@ -420,7 +424,7 @@ ESP32-CAM 每隔數秒自動拍照
 -  人臉可能被標記為 can
 -  背景反光可能誤判
 -  光線不足時辨識率下降
-
+![手](image/camera_test4.jpg)
 這些誤判也讓我更理解：
 
 > AI 並不是「真正理解物體」，
