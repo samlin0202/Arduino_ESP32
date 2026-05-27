@@ -1,10 +1,12 @@
 # 🌊 海攤垃圾智慧巡檢系統
 # 📌 專案簡介
 
-本專題結合 Arduino 自走車、ESP32-CAM、YOLOv8 AI 物件辨識與 Flask 網頁系統，打造一套「海洋垃圾智慧巡檢原型系統」。
-
-希望建立一套：
-> 未來智慧海岸巡檢系統的概念原型。
+本專題結合
+• Arduino 自走車  
+• ESP32-CAM  
+• YOLOv8 AI 物件辨識  
+• Flask 網頁系統  
+打造一套「海洋垃圾智慧巡檢原型系統」。  
 
 ---
 
@@ -14,7 +16,7 @@
 超音波感測器
         ↓
 Arduino 自走車控制
-        ↓
+        ↓ 
 ESP32-CAM 拍攝影像
         ↓
 WiFi / HTTP 傳輸圖片
@@ -31,7 +33,7 @@ Flask Dashboard 顯示結果
 • Arduino 自走車避障控制  
 • ESP32-CAM 無線拍照  
 • HTTP 影像傳輸  
-• YOLOv8 垃圾辨識（Bottle/Can/Glass）
+• YOLOv8 垃圾辨識（Bottle/Can/Glass） 
 • Flask 即時視覺化介面  
 • 辨識結果統計  
 • Bounding Box 標註  
@@ -60,7 +62,7 @@ ESP32-CAM 負責：
 YOLOv8n 輕量模型
 人工蒐集與標註資料集（約 200+ 張圖片）
 Roboflow 標註
-類別：寶特瓶 / 鋁罐 
+類別：Bottle / Can 
 
 ---
 
@@ -74,11 +76,11 @@ Dashboard 提供：
 
 ---
 
-# 🔌 系統配線圖
+# 🔌 配線圖
 <div align="center">
 
-  <img src="image/signal_wiring.png" width="45%">
-  <img src="image/power_wiring.png" width="45%">
+  <img src="image/signal_wiring.png" width="40%">
+  <img src="image/power_wiring.png" width="50%">
 
   <br><br>
 
@@ -158,18 +160,13 @@ ESP32-CAM 啟動拍照
 <!--超音波感測器*3-->
 
 ## 2️⃣ 履帶長度不一致
-
-專案初期使用網路購買的「履帶式自走車底盤」進行組裝，實際測試後發現左右履帶長度存在差異。
+測試後發現左右履帶長度存在差異。
 
 造成自走車在直線行駛時，
 會持續向其中一側偏移。
 
-曾嘗試以下解決方式：
-- 手動拆除履帶其中一節
-- 調整履帶鬆緊程度
-- 嘗試透過馬達速度平衡修正方向
-
-但由於使用的馬達不支援速度控制（無 PWM 調速功能），因此無法透過程式精確修正左右速度差異。
+但由於使用的馬達不支援速度控制（無 PWM 調速功能）  
+因此無法透過程式精確修正左右速度差異。
 
 最終僅能透過：
 - 車體結構調整
