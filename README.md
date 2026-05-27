@@ -109,16 +109,11 @@ AI-Ocean-Waste-Detection-Car/
 │
 ├── yolo_detection/
 │   ├── train.py
-│   ├── detect.py
-│   ├── best.pt
-│   └── dataset/
+│   └── detect.py
 │
 ├── dashboard/
 │   ├── app.py
 │   └── templates/
-│
-├── communication/
-│   └── http_server.py
 │
 └── docs/
     ├── architecture.png
