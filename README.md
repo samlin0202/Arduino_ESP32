@@ -410,7 +410,7 @@ ESP32-CAM 每隔數秒自動拍照
 ## 🧠 YOLO 辨識
 (使用ROBOFLOW進行AI標註)
 
-![CAN標註中](image/標註.jpg)
+<img src="image/標註.jpg" width="45%">
 
 <img src="image/dataset1.jpg" width="45%">
 
