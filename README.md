@@ -72,16 +72,13 @@ Dashboard 提供：
 - 辨識圖片顯示  
 
 # 🔌 配線圖
-<div align="center">
 
-  <img src="image/signal_wiring.png" width="40%">
-  <img src="image/power_wiring.png" width="45%">
+#### 通訊配線圖:
+<img src="image/signal_wiring.png" width="45%">
 
-  <br><br>
+#### 電源配線圖:
 
-  (通訊-配線圖) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(電源-配線圖)
-
-</div>
+<img src="image/power_wiring.png" width="45%">
 
 ---
 
