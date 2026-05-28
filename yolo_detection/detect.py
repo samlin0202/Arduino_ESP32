@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import os
 from collections import Counter
 
-model = YOLO("yolov8n.pt")
+model = YOLO(r"runs\detect\train4\weights\best.pt")
 
 input_folder = "data/captured_images"
 output_folder = "data/detected_images"
@@ -24,12 +24,12 @@ for f in files:
 
     results = model(path)
 
-    # 存「畫好框的圖片」
+    # 存框圖
     save_path = os.path.join(output_folder, f)
     results[0].save(filename=save_path)
 
     # 統計
-    names = results[0].names
+    names = model.names
     boxes = results[0].boxes
 
     for box in boxes:
