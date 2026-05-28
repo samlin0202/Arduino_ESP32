@@ -1,0 +1,12 @@
+train: train/images
+val: valid/images
+
+nc: 2
+names: ['bottle', 'can']
+
+roboflow:
+  workspace: s-workspace-lpdqn
+  project: bottle-qdwv3
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/s-workspace-lpdqn/bottle-qdwv3/dataset/2
