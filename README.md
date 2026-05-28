@@ -73,12 +73,12 @@ Dashboard 提供：
 
 # 🔌 配線圖
 
-#### 通訊配線圖:
-<img src="image/signal_wiring.png" width="45%">
+#### 通訊配線圖 :  
+<img src="image/signal_wiring.png" width="45%">  
 
-#### 電源配線圖:
+#### 電源配線圖 :  
 
-<img src="image/power_wiring.png" width="45%">
+<img src="image/power_wiring.png" width="45%">  
 
 ---
 
@@ -320,13 +320,14 @@ Python + YOLOv8 進行影像辨識
 
 - Arduino 與 ESP32 穩定通訊
 - 事件觸發式拍照
-- 即時影像串流
+- 即時影像
 - 雲端資料庫
 - GPS 海岸巡檢
 - 更大型垃圾資料集
 - 即時地圖系統
 - 太陽能供電
 - AI 自主導航
+- 機械手臂夾取垃圾
 
 ---
 
