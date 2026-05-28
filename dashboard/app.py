@@ -21,13 +21,14 @@ def home():
     if os.path.exists("result.txt"):
         with open("result.txt", "r", encoding="utf-8") as f:
             for line in f:
-                k, v = line.strip().split(":")
-                stats += f"{k}: {v}\n"
-                labels.append(k)
-                values.append(int(v))
+                if ":" in line:
+                    k, v = line.strip().split(":")
+                    stats += f"{k}: {v}\n"
+                    labels.append(k)
+                    values.append(int(v))
 
     # ======================
-    # 📈 建立圖表（重點）
+    # 📈 圖表
     # ======================
     if labels:
         plt.figure(figsize=(6, 4))
@@ -40,35 +41,12 @@ def home():
         plt.close()
 
     # ======================
-    # 🖼️ 讀圖片
+    # 🖼️ 圖片
     # ======================
     img_folder = "data/detected_images"
     images = os.listdir(img_folder) if os.path.exists(img_folder) else []
 
-    # ======================
-    # 🧱 滿版圖片排版（重點）
-    # ======================
     img_html = """
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-
-        .card {
-            text-align: center;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #ddd;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
-
     <div class="grid">
     """
 
@@ -83,26 +61,106 @@ def home():
     img_html += "</div>"
 
     # ======================
-    # 🌐 HTML
+    # 🌐 HTML + CSS UI
     # ======================
     html = f"""
     <html>
     <head>
         <title>YOLO Dashboard</title>
+
+        <style>
+            body {{
+                margin: 0;
+                font-family: "Segoe UI", sans-serif;
+                background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+                color: white;
+            }}
+
+            h1 {{
+                text-align: center;
+                padding: 20px;
+                font-size: 32px;
+            }}
+
+            h2 {{
+                margin-top: 30px;
+                border-left: 5px solid #6366f1;
+                padding-left: 10px;
+                margin-left: 20px;
+            }}
+
+            pre {{
+                background: rgba(255,255,255,0.08);
+                padding: 15px;
+                margin: 20px;
+                border-radius: 12px;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            }}
+
+            .chart-box {{
+                text-align: center;
+            }}
+
+            .chart-box img {{
+                width: 500px;
+                max-width: 90%;
+                border-radius: 12px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            }}
+
+            .grid {{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }}
+
+            .card {{
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(12px);
+                border-radius: 16px;
+                padding: 10px;
+                text-align: center;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+                transition: 0.3s;
+            }}
+
+            .card:hover {{
+                transform: translateY(-8px);
+                box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            }}
+
+            .card img {{
+                width: 100%;
+                border-radius: 12px;
+            }}
+
+            .refresh {{
+                text-align: center;
+                font-size: 12px;
+                opacity: 0.6;
+                margin-bottom: 20px;
+            }}
+        </style>
     </head>
 
-    <body style="font-family:Arial; margin:20px;">
+    <body>
 
-        <h1>🚀 YOLO 垃圾辨識系統</h1>
+        <h1>🚀 YOLO 垃圾辨識系統 Dashboard</h1>
 
         <h2>📊 統計結果</h2>
         <pre>{stats}</pre>
 
-        <h2>📈 圖表</h2>
-        <img src="/static/chart.png" width="500">
+        <h2>📈 圖表分析</h2>
+        <div class="chart-box">
+            <img src="/static/chart.png">
+        </div>
 
         <h2>🖼️ 辨識圖片</h2>
         {img_html}
+
+        <div class="refresh">🔄 每 5 秒自動更新</div>
 
         <script>
             setTimeout(() => {{

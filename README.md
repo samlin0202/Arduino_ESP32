@@ -289,9 +289,9 @@ Python + YOLOv8 進行影像辨識
 ---
 
 ## 🌐 Dashboard 畫面
-<img src="image/HTTP_統計圖表.jpg" width="45%">
+<img src="image/http統計圖表.jpg" width="45%">
 
-<img src="image/HTTP_辨識圖片.jpg" width="45%">
+<img src="image/http辨識結果.jpg" width="45%">
 
 ---
 
